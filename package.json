@@ -2,7 +2,7 @@
     "name": "moleculer-snippets",
     "displayName": "Moleculer Snippets",
     "description": "snippets for moleculer microservices framework",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "icon": "images/moleculer.png",
     "engines": {
         "vscode": "^1.42.0"
