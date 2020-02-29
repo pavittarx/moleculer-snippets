@@ -2,7 +2,8 @@
 
 ## [0.2.0]
 - Formatting update 
-- Added New Snippets
+- Fixed some errorenous snippets
+
 
 ## [0.1.0]
 - Initial release
