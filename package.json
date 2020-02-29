@@ -1,0 +1,27 @@
+{
+    "name": "moleculer-snippets",
+    "displayName": "Moleculer Snippets",
+    "description": "snippets for moleculer microservices framework",
+    "version": "0.1.0",
+    "icon": "images/moleculer.png",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "publisher": "pavittarx",
+    "categories": [
+        "Snippets"
+    ],
+    "repository": "https://github.com/pavittarx/moleculer-snippets.git",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "typescript",
+                "path": "snippets/ts-snippets.json"
+            }
+        ]
+    }
+}
