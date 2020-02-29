@@ -4,7 +4,7 @@
 		"scope": "javascript, typescript",
 		"body": [
 			"module.exports = {",
-			"  namespace: '',",
+			"  namespace: '$0',",
 			"  nodeID: null,",
 			"  transporter: 'nats://localhost:4222/',",
 			"  logger: true,",
@@ -24,12 +24,12 @@
 			"    enabled: true,",
 			"    shutdownTimeout: 10*1000",
 			"  },",
-			" middlewares: [],",
-			" $$noVersionPrefix: false,",
-			" $$noServicePrefix: false,",
-			" $$dependencyTimeout: 0,",
-			" $$shutdownTimeout: 0,",
-			" secureSettings: []",
+			"  middlewares: [],",
+			"  $$noVersionPrefix: false,",
+			"  $$noServicePrefix: false,",
+			"  $$dependencyTimeout: 0,",
+			"  $$shutdownTimeout: 0,",
+			"  secureSettings: []",
 			"}"
 		],
 		"description": "molecular.config.js"
@@ -39,10 +39,10 @@
 		"scope": "javascript, typescript",
 		"body": [
 			"module.exports = {",
-			"  name: \"molecule.middleware\",",
+			"  name: \"molecule.middleware $0\",",
 			"  localAction(next, action) {",
 			"    return function(ctx) {",
-			"    console.log(`Middleware Executed Before `${ctx.action.name}``);$0",
+			"    console.log(`Middleware Executed Before `${ctx.action.name}`);",
 			"    return next(ctx);",
 			"    }",
 			"  }",
@@ -56,7 +56,7 @@
 		"body": [
 			"localAction(next, action) {",
 			"  return function(ctx) {",
-			"  console.log(`Middleware Executed Before `${ctx.action.name}``);",
+			"  console.log(`Middleware Executed Before `${ctx.action.name}`);$0",
 			"  return next(ctx);",
 			"  }",
 			"}"
@@ -104,7 +104,7 @@
 		"body": [
 			"emit(next) {",
 			"  return function(eventName, payload, opts) {",
-			"      console.log(\"The 'emit' is called.\", eventName);",
+			"      console.log(\"The 'emit' is called.\", eventName);$0",
 			"      return next(eventName, payload, opts);",
 			"  };",
 			"}"
@@ -179,10 +179,10 @@
 			"  async stopped(){",
 			"  },",
 			"  dependencies: [],",
-			"  metadata: [",
+			"  metadata: {",
 			"    scalable: true,",
 			"    priority: 5",
-			"  ]",
+			"  }",
 			"}"
 		],
 		"description": "Molecular Service Clean"
