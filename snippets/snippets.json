@@ -111,7 +111,7 @@
 		],
 		"description": "Moleculer Middleware Emit Event Snippet"
 	},
-	"Molecular Service Boilerplate": {
+	"Molecular Service": {
 		"prefix": "Moleculer Service Boilerplate",
 		"scope": "javascript, typescript",
 		"body": [
@@ -146,16 +146,16 @@
 			"  },",
 			"  // list of other services this service uses",
 			"  dependencies: [],",
-			"  metadata: [",
+			"  metadata: {",
 			"    scalable: true,",
 			"    priority: 5",
-			"  ]",
+			"  }",
 			"  // Properties available to service instances",
 			"  // https://moleculer.services/docs/0.14/services.html#Properties-of-Service-Instances",
 			"",
 			"}"
 		],
-		"description": "Molecular Service Boilerplate"
+		"description": "Molecular Service"
 	},
 	"Molecular Service Clean": {
 		"prefix": "Molecular Service Clean",
