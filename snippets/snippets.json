@@ -1,5 +1,5 @@
 {
-	"molecular.config.js boilerplate": {
+	"molecular.config.js": {
 		"prefix": "molecular.config.js",
 		"scope": "javascript, typescript",
 		"body": [
@@ -32,180 +32,10 @@
 			"  secureSettings: []",
 			"}"
 		],
-		"description": "molecular.config.js"
+		"description": "Configuration snippet for moleculerjs. It contains basic parameters you may want to configure."
 	},
-	"mol.middleware.js": {
-		"prefix": "Moleculer Middleware",
-		"scope": "javascript, typescript",
-		"body": [
-			"module.exports = {",
-			"  name: \"molecule.middleware $0\",",
-			"  localAction(next, action) {",
-			"    return function(ctx) {",
-			"    console.log(`Middleware Executed Before `${ctx.action.name}`);",
-			"    return next(ctx);",
-			"    }",
-			"  }",
-			"};"
-		],
-		"description": "Moleculer Middleware Action Snippet"
-	},
-	"Moleculer Middleware LocalAction Snippet": {
-		"prefix": "LocalAction - Moleculer Middleware",
-		"scope": "javascript, typescript",
-		"body": [
-			"localAction(next, action) {",
-			"  return function(ctx) {",
-			"  console.log(`Middleware Executed Before `${ctx.action.name}`);$0",
-			"  return next(ctx);",
-			"  }",
-			"}"
-		],
-		"description": "Moleculer Middleware Action Snippet"
-	},
-	"Moleculer Middleware RemoteAction Snippet": {
-		"prefix": "RemoteAction - Moleculer Middleware",
-		"scope": "javascript, typescript",
-		"body": [
-			"remoteAction(next, action) {",
-			"  return function (ctx) {",
-			"    $0",
-			"    // Change context properties or something",
-			"    return next(ctx)",
-			"      .then(res => {",
-			"        // Do something with the response",
-			"        return res;",
-			"      })",
-			"      .catch(err => {",
-			"        // Handle error or throw further",
-			"        throw err;",
-			"      });",
-			"  }",
-			"}"
-		],
-		"description": "Moleculer Middleware Remote Action Snippet"
-	},
-	"Moleculer Middleware Local Event Snippet": {
-		"prefix": "LocalEvent - Moleculer Middleware",
-		"scope": "javascript, typescript",
-		"body": [
-			"localEvent(next, event) {",
-			"  return (ctx) => {",
-			"    ",
-			"    return next(ctx);",
-			"  };",
-			"}"
-		],
-		"description": "Moleculer Middleware Local Event Snippet"
-	},
-	"Moleculer Middleware Emit Event Snippet": {
-		"prefix": "EmitEvent - Moleculer Middleware",
-		"scope": "javascript, typescript",
-		"body": [
-			"emit(next) {",
-			"  return function(eventName, payload, opts) {",
-			"      console.log(\"The 'emit' is called.\", eventName);$0",
-			"      return next(eventName, payload, opts);",
-			"  };",
-			"}"
-		],
-		"description": "Moleculer Middleware Emit Event Snippet"
-	},
-	"Molecular Service": {
-		"prefix": "Moleculer Service Boilerplate",
-		"scope": "javascript, typescript",
-		"body": [
-			"module.exports = {",
-			"  name: \"$0\",",
-			"  mixins: [],",
-			"  settings: {",
-			"  },",
-			"  actions: {",
-			"    hello(ctx){",
-			"      return \"Hello, World!\";",
-			"    }",
-			"  },",
-			"  methods: {",
-			"    helloPrivate(ctx){",
-			"      return \"a private Hello! :D\";",
-			"    }",
-			"  },",
-			"  events: {",
-			"    \"hello.world\"(ctx){",
-			"      console.log(\"Welcome to the world.\");",
-			"    }",
-			"  },",
-			"  created(){",
-			"   console.log(\"The service, \", this.name, \"has been created\");",
-			"  }, ",
-			"  async started(){",
-			"    // runs when service starts",
-			"  },",
-			"  async stopped(){",
-			"   // runs when service stops",
-			"  },",
-			"  // list of other services this service uses",
-			"  dependencies: [],",
-			"  metadata: {",
-			"    scalable: true,",
-			"    priority: 5",
-			"  }",
-			"  // Properties available to service instances",
-			"  // https://moleculer.services/docs/0.14/services.html#Properties-of-Service-Instances",
-			"",
-			"}"
-		],
-		"description": "Molecular Service"
-	},
-	"Molecular Service Clean": {
-		"prefix": "Molecular Service Clean",
-		"scope": "javascript, typescript",
-		"body": [
-			"module.exports = {",
-			"  name: \"$0\",",
-			"  mixins: [],",
-			"  settings: {",
-			"  },",
-			"  actions: {",
-			"  },",
-			"  methods: {",
-			"  },",
-			"  events: {",
-			"  },",
-			"  created(){",
-			"  }, ",
-			"  async started(){",
-			"  },",
-			"  async stopped(){",
-			"  },",
-			"  dependencies: [],",
-			"  metadata: {",
-			"    scalable: true,",
-			"    priority: 5",
-			"  }",
-			"}"
-		],
-		"description": "Molecular Service Clean"
-	},
-	"Molecular Service Minimal": {
-		"prefix": "Molecular Service Minimal",
-		"scope": "javascript, typescript",
-		"body": [
-			"module.exports = {",
-			"  name: \"$0\",",
-			"  mixins: [],",
-			"  settings: {",
-			"  },",
-			"  actions: {",
-			"  },",
-			"  events: {",
-			"  }",
-			"}"
-		],
-		"description": "Molecular Service Minimal"
-	},
-	"Molecular Lifecycle Hooks": {
-		"prefix": "Molecular Lifecycle Hooks",
+	"lifecycleHooks.moleculer": {
+		"prefix": "Lifecycle Hooks - Moleculer",
 		"scope": "javascript, typescript",
 		"body": [
 			"created(){",
@@ -220,6 +50,6 @@
 			"  console.log(this.name, \"service has been stopped.\");",
 			"}"
 		],
-		"description": "Molecular Lifecycle Hooks"
+		"description": "Snippet for Molecular Lifecycle Hooks (created(), started(), stopped())"
 	}
 }

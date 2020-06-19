@@ -1,0 +1,79 @@
+{
+  "middleware.moleculer": {
+		"prefix": "Middleware - Moleculer",
+		"scope": "javascript, typescript",
+		"body": [
+			"module.exports = {",
+			"  name: \"moleculer.middleware $0\",",
+			"  localAction(next, action) {",
+			"    return function(ctx) {",
+			"    console.log(`Middleware Executed Before`, ctx.action.name);",
+			"    return next(ctx);",
+			"    }",
+			"  }",
+			"};"
+		],
+		"description": "Boilerplate snippet for moleculer middlewares."
+	},
+	"localAction.middleware.moleculer": {
+		"prefix": "LocalAction - Moleculer Middleware",
+		"scope": "javascript, typescript",
+		"body": [
+			"localAction(next, action) {",
+			"  return function(ctx) {",
+			"  console.log(`Middleware Executed Before`, ctx.action.name);$0",
+			"  return next(ctx);",
+			"  }",
+			"}"
+		],
+		"description": "Moleculer snippet for action middleware."
+	},
+	"remoteAction.middleware.moleculer": {
+		"prefix": "RemoteAction - Moleculer Middleware",
+		"scope": "javascript, typescript",
+		"body": [
+			"remoteAction(next, action) {",
+			"  return function (ctx) {",
+			"    $0",
+			"    // Change context properties or something",
+			"    return next(ctx)",
+			"      .then(res => {",
+			"        // Do something with the response",
+			"        return res;",
+			"      })",
+			"      .catch(err => {",
+			"        // Handle error or throw further",
+			"        throw err;",
+			"      });",
+			"  }",
+			"}"
+		],
+		"description": "Moleculer snippet for remote action middleware"
+	},
+	"localEvent.middleware.moleculer": {
+		"prefix": "LocalEvent - Moleculer Middleware",
+		"scope": "javascript, typescript",
+		"body": [
+			"localEvent(next, event) {",
+			"  return (ctx) => {",
+			"    ",
+			"    return next(ctx);",
+			"  };",
+			"}"
+		],
+		"description": "Moleculer Middleware Local Event Snippet"
+	},
+	"emitEvent.middleware.moleculer": {
+		"prefix": "EmitEvent - Moleculer Middleware",
+		"scope": "javascript, typescript",
+		"body": [
+			"emit(next) {",
+			"  return function(eventName, payload, opts) {",
+			"      console.log(\"The 'emit' is called.\", eventName);$0",
+			"      return next(eventName, payload, opts);",
+			"  };",
+			"}"
+		],
+		"description": "Moleculer Middleware Emit Event Snippet"
+	}
+}
